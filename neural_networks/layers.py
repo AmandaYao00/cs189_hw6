@@ -132,7 +132,8 @@ class FullyConnected(Layer):
         self.cache = OrderedDict({"X": 0, "Z": 0})  # cache for backprop
 
         # Each layer stores dLdW and dLdb
-        self.gradients = OrderedDict({"W": 0, "b": 0})
+        dLdW = np.zeros((self.n_in, self.n_out))
+        self.gradients = OrderedDict({"W": dLdW, "b": b})
                                              # parameter gradients initialized to zero
                                            # MUST HAVE THE SAME KEYS AS `self.parameters`
 
