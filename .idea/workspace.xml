@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="125616f1-3fc5-4078-8580-1d759b28028f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/neural_networks/layers.py" beforeDir="false" afterPath="$PROJECT_DIR$/neural_networks/layers.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,7 +32,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Python tests.Unittests for tests.test_layers.TestFullyConnected.test_init_params">
+  <component name="RunManager" selected="Python tests.Unittests for tests.test_layers.TestFullyConnected">
     <configuration name="Unittests for tests.test_activations.TestReLU" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="code" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -46,7 +47,7 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests for tests.test_activations.TestSigmoid" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests for tests.test_layers.TestFullyConnected" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="code" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -56,7 +57,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;tests.test_activations.TestSigmoid&quot;" />
+      <option name="_new_target" value="&quot;tests.test_layers.TestFullyConnected&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -104,11 +105,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Unittests for tests.test_layers.TestFullyConnected.test_init_params" />
+        <item itemvalue="Python tests.Unittests for tests.test_layers.TestFullyConnected" />
         <item itemvalue="Python tests.Unittests for tests.test_layers.TestFullyConnected.test_backward" />
+        <item itemvalue="Python tests.Unittests for tests.test_layers.TestFullyConnected.test_init_params" />
         <item itemvalue="Python tests.Unittests for tests.test_layers.TestFullyConnected.test_forward" />
         <item itemvalue="Python tests.Unittests for tests.test_activations.TestReLU" />
-        <item itemvalue="Python tests.Unittests for tests.test_activations.TestSigmoid" />
       </list>
     </recent_temporary>
   </component>

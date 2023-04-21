@@ -195,9 +195,10 @@ class FullyConnected(Layer):
         W = self.parameters["W"]
         # compute the gradients of the loss w.r.t. all parameters as well as the
         # input of the layer
-        dLdW = np.where(Z > 0, X * dLdY, 0)
-        dLdb = np.where(Z > 0, dLdY, 0)
-        dLdX = np.where(Z > 0, W * dLdY, 0)
+        dLdZ = self.activation.backward(Z, dLdY)
+        dLdW = np.dot(np.transpose(X), dLdZ)
+        dLdb = dLdZ
+        dLdX = np.dot(dLdZ, np.transpose(W))
 
         # store the gradients in `self.gradients`
         # the gradient for self.parameters["W"] should be stored in
