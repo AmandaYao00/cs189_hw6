@@ -195,7 +195,11 @@ class SoftMax(Activation):
         f(z) as described above applied elementwise to `Z`
         """
         ### YOUR CODE HERE ###
-        return ...
+        out = []
+        for s in Z:
+            m = max(s)
+            out.append(np.exp(s-m)/sum(np.exp(s-m)))
+        return np.array(out)
 
     def backward(self, Z: np.ndarray, dY: np.ndarray) -> np.ndarray:
         """Backward pass for softmax activation.
