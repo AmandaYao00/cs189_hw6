@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="125616f1-3fc5-4078-8580-1d759b28028f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/neural_networks/activations.py" beforeDir="false" afterPath="$PROJECT_DIR$/neural_networks/activations.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/neural_networks/layers.py" beforeDir="false" afterPath="$PROJECT_DIR$/neural_networks/layers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/neural_networks/losses.py" beforeDir="false" afterPath="$PROJECT_DIR$/neural_networks/losses.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/neural_networks/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/neural_networks/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

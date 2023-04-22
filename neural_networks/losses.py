@@ -54,7 +54,7 @@ class CrossEntropy(Loss):
 
         m = len(Y)
         sums = np.sum(Y * np.log(Y_hat), axis=1)
-        return -1/m * sum(sums)
+        return float(-1/m * sum(sums))
 
     def backward(self, Y: np.ndarray, Y_hat: np.ndarray) -> np.ndarray:
         """Backward pass of cross-entropy loss.

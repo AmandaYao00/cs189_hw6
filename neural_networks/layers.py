@@ -124,12 +124,12 @@ class FullyConnected(Layer):
 
         ### BEGIN YOUR CODE ###
         W = self.init_weights((self.n_in, self.n_out))
-        b = np.array([0] * self.n_out)
+        b = np.array([0.0] * self.n_out)
         b = b[np.newaxis, :]
         self.parameters = OrderedDict({"W": W, "b": b})
 
         # Cache X and Z for backprop
-        self.cache = OrderedDict({"X": 0, "Z": 0})  # cache for backprop
+        self.cache = OrderedDict({"X": 0.0, "Z": 0.0})  # cache for backprop
 
         # Each layer stores dLdW and dLdb
         dLdW = np.zeros((self.n_in, self.n_out))
@@ -197,7 +197,7 @@ class FullyConnected(Layer):
         # input of the layer
         dLdZ = self.activation.backward(Z, dLdY)
         dLdW = np.dot(np.transpose(X), dLdZ)
-        dLdb = dLdZ
+        dLdb = np.dot(np.ones(len(dLdZ)), dLdZ)
         dLdX = np.dot(dLdZ, np.transpose(W))
 
         # store the gradients in `self.gradients`
