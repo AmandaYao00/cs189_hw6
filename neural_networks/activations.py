@@ -215,7 +215,25 @@ class SoftMax(Activation):
         derivative of loss w.r.t. input of this layer
         """
         ### YOUR CODE HERE ###
-        return ...
+
+        sigma = self.forward(Z)
+        out = []
+
+        for s in sigma:
+            arr = []
+            for i in range(len(s)):
+                temp_arr = []
+                for j in range(len(s)):
+                    if i == j:
+                        temp_arr.append(s[i] * (1-s[j]))
+                    else:
+                        temp_arr.append(-1 * s[i] * s[j])
+                temp_arr = np.array(temp_arr)
+                arr.append(temp_arr)
+            out.append(arr)
+
+        out = np.array(out)
+        return np.dot(dY, out)
 
 
 class ArcTan(Activation):
