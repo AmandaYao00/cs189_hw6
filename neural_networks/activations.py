@@ -219,21 +219,22 @@ class SoftMax(Activation):
         sigma = self.forward(Z)
         out = []
 
-        for s in sigma:
+        for i in range(len(sigma)):
+            s = sigma[i]
             arr = []
-            for i in range(len(s)):
+            for j in range(len(s)):
                 temp_arr = []
-                for j in range(len(s)):
-                    if i == j:
-                        temp_arr.append(s[i] * (1-s[j]))
+                for k in range(len(s)):
+                    if j == k:
+                        temp_arr.append(s[j] * (1-s[j]))
                     else:
-                        temp_arr.append(-1 * s[i] * s[j])
+                        temp_arr.append(-1 * s[j] * s[k])
                 temp_arr = np.array(temp_arr)
                 arr.append(temp_arr)
-            out.append(arr)
-
+            out.append(np.dot(dY[i], arr))
+            i += 1
         out = np.array(out)
-        return np.dot(dY, out)
+        return out
 
 
 class ArcTan(Activation):
